@@ -1,22 +1,21 @@
 <h1>New User</h1>
 
 <form action="/users" method="post" accept-charset="UTF-8" data-turbo="false">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"
->
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
   <div>
-    <label for="user_username">Username:</label>
-    <input type="text" name="user[username]" id="user_username">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username">
   </div>
 
   <div>
-    <label for="user_email">Email:</label>
-    <input type="email" name="user[email]" id="user_email">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email">
   </div>
 
   <div>
-    <label for="user_password">Password:</label>
-    <input type="password" name="user[password]" id="user_password">
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password">
   </div>
 
   <div>
