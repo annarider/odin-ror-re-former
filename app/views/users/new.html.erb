@@ -1,24 +1,21 @@
 <h1>New User</h1>
 
-<form action="/users" method="post" accept-charset="UTF-8" data-turbo="false">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-
+<%= form_tag("/users", method: :post) do %>
   <div>
-    <label for="user_username">Username:</label>
-    <input type="text" name="user[username]" id="user_username">
+    <%= label_tag(:username, "Username:") %>
+    <%= text_field_tag(:username, params[:username]) %>
   </div>
 
   <div>
-    <label for="user_email">Email:</label>
-    <input type="email" name="user[email]" id="user_email">
+    <%= label_tag(:email, "Email:") %>
+    <%= email_field_tag(:email, params[:email]) %>
   </div>
 
   <div>
-    <label for="user_password">Password:</label>
-    <input type="password" name="user[password]" id="user_password">
+    <%= label_tag(:password, "Password:") %>
+    <%= password_field_tag(:password) %>
   </div>
 
-  <div>
-    <input type="submit" value="Create User">
-  </div>
-</form>
+  <div><%= submit_tag("Create User") %></div>
+
+<% end %>
